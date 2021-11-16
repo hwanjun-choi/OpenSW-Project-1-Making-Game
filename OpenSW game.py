@@ -399,26 +399,5 @@ if check1 == False and check2 == True:
             player2.hp -= 1
         if player1.hp == 0 or player2.hp == 0:
             pygame.quit()
-    
         clock.tick(360)
-
-#game clear
-if check1 == False and check2 == False:
-    while 1:
-        font = pygame.font.Font('freesansbold.ttf', 32)
-        text = font.render('Game Clear', True, (255, 255, 255))
-        textRect = text.get_rect()
-        textRect.center = (216, 216)
-        clock.tick(60)
-        screen.fill((0, 0, 0))
-        screen.blit(text, textRect)
-        
-    
-        for e in pygame.event.get():
-            if e.type == pygame.QUIT:
-                pygame.quit()
-            if e.type == pygame.KEYDOWN and e.key == pygame.K_ESCAPE:
-                pygame.quit()
-        clock.tick(360)
-
 pygame.quit()
